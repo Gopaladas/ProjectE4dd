@@ -798,7 +798,7 @@ const Home = () => {
       `}</style>
 
       <section id="growth" className="py-10 bg-blue-200">
-        <div className="container mx-auto px-4 flex flex-wrap md:flex-nowrap">
+        <div className="container1 mx-auto px-4 flex flex-wrap md:flex-nowrap">
           {/* Left Column - Our Growth */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-4 relative bg-white rounded-lg shadow-md p-2 text-center">
             <div className="flex items-center justify-center w-full my-8">
@@ -1078,7 +1078,7 @@ const Home = () => {
       `}</style>
 
       <section className="py-6" style={{ marginTop: "-15px" }}>
-        <div className="container mx-auto overflow-hidden">
+        <div className="container1 mx-auto overflow-hidden">
           <div className="flex items-center justify-center w-full my-8">
             <div className="flex-grow h-1 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-transparent"></div>
@@ -1282,7 +1282,7 @@ const Home = () => {
         className="working-style-two py-1 bg-gray-100"
         style={{ marginTop: "-15px" }}
       >
-        <div className="container mx-auto">
+        <div className="container1 mx-auto">
           <div className="flex flex-col items-center justify-center my-8">
             {/* Mobile View */}
             <div className="flex md:hidden items-center justify-center w-full">
@@ -1378,7 +1378,7 @@ const Home = () => {
       </section>
 
       <section className="py-4 bg-gray-100" style={{ marginTop: "-20px" }}>
-        <div className="container mx-auto">
+        <div className="container1 mx-auto">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center w-full my-4">
               <div className="flex items-center">

@@ -63,7 +63,7 @@ function Contact() {
     console.log(formData);
     try {
       const res = await axios.post(
-        "project-e4dd.vercel.app/sendMail",
+        "https://project-e4dd.vercel.app/sendMail",
         formData,
         {
           withCredentials: true,

@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://project-e4dd-p8mg.vercel.app/",
     methods: ["POST", "GET"],
     credentials: true,
   })

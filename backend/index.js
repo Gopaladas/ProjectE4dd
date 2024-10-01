@@ -9,6 +9,7 @@ const app = express();
 app.use(
   cors({
     origin: ["https://project-e4dd-p8mg.vercel.app/"],
+
     methods: ["POST", "GET"],
     credentials: true,
   })

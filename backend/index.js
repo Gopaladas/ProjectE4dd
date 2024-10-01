@@ -87,6 +87,7 @@ const sendMail = async (
   pt,
   res
 ) => {
+  console.log(email);
   try {
     console.log(email);
     const mailOptions = {

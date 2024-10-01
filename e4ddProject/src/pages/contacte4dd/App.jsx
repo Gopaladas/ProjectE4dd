@@ -62,9 +62,13 @@ function Contact() {
     e.preventDefault();
     console.log(formData);
     try {
-      const res = await axios.post("http://localhost:4000/sendMail", formData, {
-        withCredentials: true,
-      });
+      const res = await axios.post(
+        "https://project-e4dd.vercel.app/sendMail",
+        formData,
+        {
+          withCredentials: true,
+        }
+      );
 
       console.log(res);
       if (res.data.success) {

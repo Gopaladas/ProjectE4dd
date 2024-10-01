@@ -9,16 +9,13 @@ import {
   faWhatsapp,
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
+import floating from "../Navbar/floating.png";
 
 const Footer = () => {
   return (
     <>
       <div className="cardfooter ">
-        <img
-          src="https://uiverse.io/build/_assets/astronaut-WTFWARES.png"
-          alt=""
-          className="imagefooter"
-        />
+        <img src={floating || ""} alt="" className="imagefooter" />
         <div className="absolute z-10 ">
           <p className="text-center">
             COPYRIGHT ©2024, ELITE for Digital Development LLC. ALL RIGHTS

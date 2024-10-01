@@ -5,23 +5,23 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-
+// https://project-e4dd-p8mg.vercel.app/
 app.use(
   cors({
-    origin: ["https://project-e4dd-p8mg.vercel.app"],
+    origin: ["https://project-e4dd-p8mg.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
 app.use(express.json());
 
-// const Router = express.Router();
+const Router = express.Router();
 
-app.get("/", async (req, res) => {
+Router.get("/", async (req, res) => {
   res.send("Hello World");
 });
 
-app.post("/sendMail", async (req, res) => {
+Router.post("/sendMail", async (req, res) => {
   const {
     firstName,
     lastName,
@@ -134,8 +134,8 @@ const sendMail = async (
 };
 
 // Example usage
-// app.use("/api/mail", Router);
+app.use("/api/mail", Router);
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`server is running at port at ${PORT}`));

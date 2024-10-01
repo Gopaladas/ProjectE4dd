@@ -2,13 +2,15 @@ import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 dotenv.config();
 
 const app = express();
+// app.use(bodyParser.json());
 // https://project-e4dd-p8mg.vercel.app/
 app.use(
   cors({
-    origin: ["https://project-e4dd-p8mg.vercel.app/"],
+    origin: ["http://localhost:5173"],
 
     methods: ["POST", "GET"],
     credentials: true,
@@ -16,13 +18,13 @@ app.use(
 );
 app.use(express.json());
 
-const Router = express.Router();
+// const Router = express.Router();
 
-Router.get("/", async (req, res) => {
+app.get("/", async (req, res) => {
   res.send("Hello World");
 });
 
-Router.post("/sendMail", async (req, res) => {
+app.post("/sendMail", async (req, res) => {
   const {
     firstName,
     lastName,
@@ -89,6 +91,7 @@ const sendMail = async (
   res
 ) => {
   console.log(email);
+
   try {
     console.log(email);
     const mailOptions = {
@@ -135,7 +138,7 @@ const sendMail = async (
 };
 
 // Example usage
-app.use("/", Router);
+// app.use("/", Router);
 
 const PORT = process.env.PORT || 5000;
 

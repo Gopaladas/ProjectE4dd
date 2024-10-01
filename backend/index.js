@@ -64,7 +64,7 @@ app.post("/sendMail", async (req, res) => {
       res
     );
   } catch (error) {
-    return res.json({ success: false, message: "error" });
+    return res.json({ success: false, message: `error above : ${error}` });
   }
 });
 
@@ -133,7 +133,7 @@ const sendMail = async (
     });
   } catch (error) {
     console.log("Error occurred:", error);
-    return res.json({ success: false, message: "error occured" });
+    return res.json({ success: false, message: `error occured ${error}` });
   }
 };
 

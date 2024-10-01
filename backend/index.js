@@ -16,7 +16,7 @@ app.use(express.json());
 
 const Router = express.Router();
 
-Router.get("/", async (req, res) => {
+app.get("/", async (req, res) => {
   res.send("Hello World");
 });
 

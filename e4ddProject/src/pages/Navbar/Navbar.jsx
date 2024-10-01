@@ -3,6 +3,7 @@ import throttle from "lodash.throttle";
 import "./Navbar.css"; // Make sure to create your own Navbar.css for styling
 import { Link } from "react-router-dom";
 import logo from "./e4dd.jpeg";
+import floating from "./floating.png";
 // Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -248,11 +249,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="cardn">
-          <img
-            className="image"
-            alt=""
-            src="https://uiverse.io/build/_assets/astronaut-WTFWARES.png"
-          />
+          <img className="image" alt="" src={floating || ""} />
           <div className="heading">We're on Social Media</div>
           <div className="icons1">
             <a href="https://www.instagram.com/elite4dd/" className="">

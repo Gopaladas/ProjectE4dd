@@ -134,7 +134,7 @@ const sendMail = async (
 };
 
 // Example usage
-app.use("/api/mail", Router);
+app.use("/", Router);
 
 const PORT = process.env.PORT || 5000;
 

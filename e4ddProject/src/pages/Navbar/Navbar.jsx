@@ -291,7 +291,7 @@ const Navbar = () => {
               Home
             </Link>
           </li> */}
-          <li className=" px-2">
+          <li className="navsubparent px-2">
             <Link className="btn" onClick={() => opennavmenu(1)}>
               Who we are
               <FontAwesomeIcon
@@ -331,7 +331,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li className=" px-2">
+          <li className="navsubparent px-2">
             <Link className="btn" onClick={() => opennavmenu(2)}>
               What we do
               <FontAwesomeIcon

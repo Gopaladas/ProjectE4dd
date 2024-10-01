@@ -3,6 +3,9 @@ import backgroundVideo from "./vdcontact.mp4";
 import image1 from "./image1.jpg";
 import image2 from "./image2.jpg";
 import image3 from "./image3.jpg"; // New image added
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -55,9 +58,28 @@ function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/mail/sendMail",
+        formData,
+        {
+          withCredentials: true,
+        }
+      );
+
+      console.log(res);
+      if (res.data.success) {
+        toast.success("Email sent successfully!");
+      } else {
+        toast.error("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Failed to send email. Please try again.");
+    }
     setFormData({
       firstName: "",
       lastName: "",
@@ -373,6 +395,7 @@ function Contact() {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

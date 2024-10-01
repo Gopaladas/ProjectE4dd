@@ -8,20 +8,20 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://project-e4dd-p8mg.vercel.app/",
+    origin: ["https://project-e4dd-p8mg.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
 app.use(express.json());
 
-const Router = express.Router();
+// const Router = express.Router();
 
 app.get("/", async (req, res) => {
   res.send("Hello World");
 });
 
-Router.post("/sendMail", async (req, res) => {
+app.post("/sendMail", async (req, res) => {
   const {
     firstName,
     lastName,
